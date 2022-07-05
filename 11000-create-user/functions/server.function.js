@@ -37,9 +37,10 @@ module.exports.registermemberPD = async (req, _user) => {
             })
 
         }
-        //console.log(option.body)
+        console.log(option.body)
+        console.log("info",info)
         //console.log(option.json())
-        const call = await fetch(info.provider.prov_domain + 'ext/CreateUser/' + info.provider.prov_prefix + '/' + info.provider.prov_agentusername, option)
+        const call = await fetch(info.provider.prov_domain + 'ext/createUser/' + info.provider.prov_prefix + '/' + info.provider.prov_agentusername, option)
 
             .then(async res => await res.json())
 
